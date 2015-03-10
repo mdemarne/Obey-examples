@@ -9,7 +9,6 @@ import scala.language.reflectiveCalls
   def message(t: Term.Name): Message = Message(s"Changing list to set, for the fun of it", t)
 
   def apply = {
-    println("Applying MyRule02...")
     transform {
       case t @ Term.Name("List") =>
         Term.Name("Set") andCollect message(t)

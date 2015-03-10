@@ -26,7 +26,6 @@ lazy val root = (project in file(".")).
   settings (
     name := "Test for obey-flavoured sbt",
     scalaVersion := languageVersion,
-    obeyplugin.obeyWarn += "+{list*}",
     obeyplugin.obeyRules := "project/rules/target/scala-2.11/classes/"
   ) dependsOn(rules) enablePlugins(obeyplugin)
 
