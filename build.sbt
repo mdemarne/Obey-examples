@@ -22,13 +22,16 @@ scalacOptions += "-feature"
 
 /* Defining projects */
 
+/* Defining the root project. The only thing required is too specify that it 
+ * depends on the rules project and must enable the obey plugin */
 lazy val root = (project in file(".")).
   settings (
-    name := "Test for obey-flavoured sbt",
-    scalaVersion := languageVersion,
-    obeyplugin.obeyRules := "project/rules/target/scala-2.11/classes/"
+    name := "Test for obey",
+    scalaVersion := languageVersion
   ) dependsOn(rules) enablePlugins(obeyplugin)
 
+/* Define rules project - the rules will be built and automatically run on the
+ * rest of the project */
 lazy val rules = (project in file("project/rules")).
   settings (
     name := "Custom rules",
