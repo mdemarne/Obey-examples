@@ -10,16 +10,6 @@ scalaVersion := languageVersion
 // Adding Sonatype snapshots for experimental tools (Obey, TQL) to resolvers.
 resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
-libraryDependencies ++= Seq(
-  "org.scala-lang" % "scala-reflect" % languageVersion,
-  "org.scala-lang" % "scala-compiler" % languageVersion,
-  "org.scalameta" %% "scalameta" % metaVersion,
-  "org.scalameta" %% "scalameta-foundation" % metaVersion,
-  "org.scalameta" %% "interpreter" % metaVersion
-)
-
-scalacOptions += "-feature"
-
 /* Defining projects */
 
 /* Defining the root project. The only thing required is too specify that it 
@@ -37,9 +27,6 @@ lazy val rules = (project in file("project/rules")).
     name := "Custom rules",
     scalaVersion := languageVersion,
     resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
-    libraryDependencies ++= Seq(
-      "com.github.mdemarne" % s"model_$languageVersion" % metaVersion,
-      "com.github.mdemarne" % s"plugin_$languageVersion" % metaVersion
-    )    
+    libraryDependencies += "com.github.mdemarne" % s"model_$languageVersion" % metaVersion
   )
 
