@@ -3,8 +3,8 @@ import scala.meta.tql._
 import scala.obey.model._
 import scala.language.reflectiveCalls
 
-@Tag("Var", "Val", "Test") object MyRule01 extends Rule {
-  def description = "My Rule for tests"
+@Tag("Var", "Val") object VarToVal extends Rule {
+  def description = "Changing vars assigned once to vals"
 
   def message(n: Tree, t: Tree): Message = Message(s"The 'var' $n from ${t} was never reassigned and should therefore be a 'val'", t)
 
