@@ -25,3 +25,8 @@ See [build.sbt](https://github.com/mdemarne/Obey-examples/blob/master/build.sbt)
 Obey can correct your source code based on your rules. This feature is still in development as it simply reprint the
 tree in the source file while saving the original and does not persist comments. By default, Obey only generates
 warnings. Check out the [README.md](https://github.com/mdemarne/Obey) of Obey for more details.
+
+
+## Acknowledgment
+
+This project is greatly inspired from [IObey](https://github.com/aghosn/IObey), by [aghosn](https://github.com/aghosn).
