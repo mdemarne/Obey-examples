@@ -15,7 +15,7 @@ You can put the `rules` project wherever you want in your repository. By convent
 4. Make your root project depends on the plugin and on the rules project. Even if your project does not need to have
  the rules visible in its space, depending on it will ensure that the rules will be recompiled each time you did a
   change, and before your root project in itself is compiled.
-5. Define the path to your project's rule in our project definition, by adding, for example, `obeyRules := "project/rules/target/scala-2.11/classes/"` to the settings of your root project.
+5. Define the path to your project's rule in our project definition, by adding, for example, `ObeyPlugin.obeyRules := "project/rules/target/scala-2.11/classes/"` to the settings of your root project.
 6. You are all set! If you run `sbt compile`, it should generate warning based on your rules.
 
 See [build.sbt](https://github.com/mdemarne/Obey-examples/blob/master/build.sbt) for the root project, [Rules.scala](https://github.com/mdemarne/Obey-examples/blob/master/project/Rules.scala) for the `rules`.
