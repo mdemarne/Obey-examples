@@ -4,6 +4,6 @@ lazy val root = (project in file(".")).
   settings (
     name := "Tests for Obey",
     scalaVersion := "2.11.6",
-    ObeyPlugin.obeyRules := "project/rules/target/scala-2.11/classes/"
+    ObeyPlugin.obeyRulesDir := "project/rules/target/scala-2.11/classes/"
   ) dependsOn(rules) enablePlugins(ObeyPlugin)
 
