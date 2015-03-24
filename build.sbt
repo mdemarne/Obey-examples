@@ -3,7 +3,6 @@ resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repos
 lazy val root = (project in file(".")).
   settings (
     name := "Tests for Obey",
-    scalaVersion := "2.11.6",
-    ObeyPlugin.obeyRulesDir := "project/rules/target/scala-2.11/classes/"
+    scalaVersion := "2.11.6"
   ) dependsOn(rules) enablePlugins(ObeyPlugin)
 
