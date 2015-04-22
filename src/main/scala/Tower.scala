@@ -1,15 +1,16 @@
 package propaganda
+
 import scala.collection.mutable.Stack
 
 class Tower(index: Integer) {
   val disks = new Stack[Integer]()
-  
+
   def getIndex: Integer = index
 
   def add(d: Integer) {
     if(!disks.isEmpty && disks.head <= d)
       throw new Exception(s"${index}:Error placing the disk ${d} on top of ${disks.head}")
-    else 
+    else
       disks.push(d)
   }
 
