@@ -19,4 +19,6 @@ class Hanoi(origin: Tower, end: Tower, buffer: Tower) {
   }
 
   override def toString = "{"+origin + ", "+buffer+", "+end+"}"
+
+  case class Dummy()
 }
