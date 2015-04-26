@@ -3,7 +3,7 @@ import scala.meta.tql._
 import scala.obey.model._
 import scala.language.reflectiveCalls
 
-@Tag("Mine") object SetToList extends Rule {
+@Tag("Mine") object SetToList extends FixRule {
   def description = "defining Set.toList is defining a List"
 
   def message(t: Term.Select): Message = Message(s"The assignment $t creates a list from a set and does not guarantee the ordering", t)

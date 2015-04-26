@@ -6,7 +6,6 @@ import scala.collection.mutable.Stack
 class Hanoi(origin: Tower, end: Tower, buffer: Tower) {
 
   def init {
-    var c = 3
     var v  = List.range(0, 5).reverse
     v.foreach(i => origin.add(i))
     v = List()
