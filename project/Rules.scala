@@ -11,7 +11,7 @@ object Rules extends Build {
       name := "Custom rules",
       scalaVersion := languageVersion,
       resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
-      libraryDependencies += "com.github.mdemarne" % s"model_$languageVersion" % metaVersion
+      libraryDependencies += "com.github.mdemarne" % s"obey-model_$languageVersion" % metaVersion
   )
 
 }
