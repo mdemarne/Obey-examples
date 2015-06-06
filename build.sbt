@@ -6,6 +6,6 @@ lazy val root = (project in file(".")).
   settings (
     name := "Tests for Obey",
     scalaVersion := sv,
-    ObeyPlugin.obeyRules := "+ {Scala*} - {Completeness*} - {Mine*} - {Dotty*}",
+    ObeyPlugin.obeyRules := "+ {Scala} - {Completeness} -{Dotty} -{Demo}",
     libraryDependencies += "com.github.mdemarne" % s"obey-rules_$sv"  % "0.1.0-SNAPSHOT"
   ) dependsOn(rules) enablePlugins(ObeyPlugin)
